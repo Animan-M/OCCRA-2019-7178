@@ -34,8 +34,8 @@ task main()
     motor[backLeft] =  vexRT[Ch3] - vexRT[Ch1] + vexRT[Ch4];
 
     if(vexRT[Btn6UXmtr2] == 1) {
-    	motor[leftShooter] = 60;
-    	motor[rightShooter] = 60;
+    	motor[leftShooter] = 40;
+    	motor[rightShooter] = 40;
     } else if(vexRT[Btn6DXmtr2] == 1) {
     	motor[leftShooter] = -90;
     	motor[rightShooter] = -90;
