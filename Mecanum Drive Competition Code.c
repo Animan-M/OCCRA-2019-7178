@@ -89,13 +89,19 @@ task usercontrol()
     motor[frontLeft] = vexRT[Ch3] - vexRT[Ch1] - vexRT[Ch4];
     motor[backLeft] =  vexRT[Ch3] - vexRT[Ch1] + vexRT[Ch4];
 
-    if(vexRT[Btn6UXmtr2] == 1) {
+    if(vexRT[Btn6UXmtr2] == 1) { //intake
     	motor[leftShooter] = 60;
     	motor[rightShooter] = 60;
-    } else if(vexRT[Btn6DXmtr2] == 1) {
+    } else if(vexRT[Btn6DXmtr2] == 1) { //outtake
     	motor[leftShooter] = -60;
     	motor[rightShooter] = -60;
-    } else {
+    } else if (vexRT[Btn5UXmtr2] == 1) { //Rotate cube left
+    	motor[leftShooter] = -60;
+    	motor[rightShooter] = 60;
+  	} else if (vexRT[Btn5DXmtr2] == 1) { //Rotate cube right
+  		motor[leftShooter] = 60;
+  		motor[rightShooter] = -60;
+ 		}	else {
     	motor[leftShooter] = 0;
     	motor[rightShooter] = 0;
     }
